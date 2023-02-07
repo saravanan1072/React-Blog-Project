@@ -1,0 +1,33 @@
+#latest{
+    position: relative;
+    display: inline-block;
+    /* top: 100px;
+    left: 20px; */
+    top: 610px;
+    left: 10px;
+} 
+#grid-container{
+    margin-left: 100px;
+    display: flex;
+}
+.child{
+    margin: 25px;
+    padding: 12px;
+}
+img{
+    width: 350px;
+}
+
+
+@media( max-width:420px) {
+
+    #latest{ 
+        top: 910px;
+        left: 10px;
+    } 
+    #grid-container{
+       margin-left: 0px;
+       display: block;
+    }
+    
+}
