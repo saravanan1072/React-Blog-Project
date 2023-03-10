@@ -1,4 +1,5 @@
 #latest{
+    margin-left: 100px;
     position: relative;
     display: inline-block;
     /* top: 100px;
@@ -7,7 +8,7 @@
     left: 10px;
 } 
 #grid-container{
-    margin-left: 100px;
+    margin-left: 0px;
     display: flex;
 }
 .child{
@@ -17,16 +18,20 @@
 img{
     width: 350px;
 }
-
+.line2{
+    width: 100px;
+    background-color: red;
+    height: 3px;
+}
 
 @media( max-width:420px) {
 
     #latest{ 
         top: 910px;
-        left: 10px;
+        left: -80px;
     } 
     #grid-container{
-       margin-left: 0px;
+       margin-left: -10px;
        display: block;
     }
     

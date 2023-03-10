@@ -2,7 +2,8 @@ import "./Latest.css";
 import {useNavigate} from 'react-router-dom'
 
 import { useEffect ,useState} from "react";
-import { latestApi } from "../../utility/Api/Bollyhood";
+//import { latestApi } from "../../utility/Api/Bollyhood";
+import { ApiCaller } from "../../utility/ApiCaller";
 export default function Latest(){
 
 
@@ -13,12 +14,26 @@ export default function Latest(){
 
 
   const [data,setData]=useState([])
-  useEffect(()=>{
-  
-     
-        setData(latestApi)
-       
+//   useEffect(()=>{
+//         setData(latestApi)    
 
+// },[]);
+
+useEffect(()=>{
+    ApiCaller({
+      url:"https://reactblock-backend.onrender.com/latest",
+       method:'get',
+   })
+   .then((Response)=>{
+      setData(Response);
+      console.log(Response)
+   })
+   .catch((rej)=>{
+       console.log(rej);
+   })
+   .finally(()=>{
+       console.log("done");
+   })
 },[]);
 const handleNavigation = (item, index) => {
     console.log(item);
@@ -27,7 +42,7 @@ const handleNavigation = (item, index) => {
 
     return(
         <div id="latest">
-            <h2>The Latest</h2><hr/>
+            <h2>The Latest</h2><hr className="line2"/>
             <div id="grid-container">
                 <div className="child child1">
                     <img src={data[0]?.urlToImage} alt="tree"

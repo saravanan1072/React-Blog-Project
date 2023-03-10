@@ -3,7 +3,8 @@ import { useEffect ,useState} from "react";
 import bollyfirst from '../../images/bollyfirst.jpeg';
 import Nav from "../../Route/navgation/Nav";
 import Title from "../../Route/navgation/Title";
-import {bollyApi} from '../../utility/Api/Bollyhood'
+//import {bollyApi} from '../../utility/Api/Bollyhood'
+import { ApiCaller } from "../../utility/ApiCaller";
 
 
 const Bollywood=()=>{
@@ -13,26 +14,25 @@ const Bollywood=()=>{
         
     }
 const [data,setData]=useState([])
+    // useEffect(()=>{
+    //         setData(bollyApi)
+    // },[]);
     useEffect(()=>{
-        // ApiCaller({
-        //    url:"https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=8d69664814e9481094f08138747bb2a2",
-        //     method:'get',
-
-        // })
-        // .then((Response)=>{
-            setData(bollyApi)
-           
-
-        // })
-        // .catch((rej)=>{
-        //     console.log(rej);
-        // })
-        // .finally(()=>{
-        //     console.log("done");
-        // })
-    },[]);
-console.log(typeof data);
-console.log(data);
+        ApiCaller({
+                  url:"https://reactblock-backend.onrender.com/bollywood",
+                   method:'get',
+               })
+               .then((Response)=>{
+                  setData(Response);
+                 
+               })
+               .catch((rej)=>{
+                   console.log(rej);
+               })
+               .finally(()=>{
+                   console.log("done");
+               })
+           },[]);
 
 
     return(

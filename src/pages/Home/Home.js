@@ -11,32 +11,33 @@ import {useNavigate} from 'react-router-dom'
 
 import "./Home.css";
 import { useEffect ,useState} from "react";
-// import { ApiCaller } from "../../utility/ApiCaller";
-import { HomeApi } from "../../utility/Api/Bollyhood";
+import { ApiCaller } from "../../utility/ApiCaller";
+//import { HomeApi } from "../../utility/Api/Bollyhood";
 
 function Home() {
 
   const [data,setData]=useState([]);
   const navigate=useNavigate();
-  useEffect(()=>{
-    setData(HomeApi)
-    // ApiCaller({
-    //    url:"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8d69664814e9481094f08138747bb2a2",
-    //     method:'get',
+//   useEffect(()=>{
+//     setData(HomeApi)
+  
+// },[]);
 
-    // })
-    // .then((Response)=>{
-    //   console.log(Response)
-        // setData(Response.articles)
-       
-
-    // })
-    // .catch((rej)=>{
-    //     console.log(rej);
-    // })
-    // .finally(()=>{
-    //     console.log("done");
-    // })
+useEffect(()=>{
+  ApiCaller({
+    url:"https://reactblock-backend.onrender.com/home",
+     method:'get',
+ })
+ .then((Response)=>{
+    setData(Response);
+    console.log(Response)
+ })
+ .catch((rej)=>{
+     console.log(rej);
+ })
+ .finally(()=>{
+     console.log("done");
+ })
 },[]);
 
 const handleNavigation = (item, index) => {
@@ -72,7 +73,7 @@ const handleNavigation = (item, index) => {
            onClick={() => handleNavigation(data[2], 2)} />
           <div className="textThird">
             The sound cloud <br /> You loved is doomed
-            <div className="text-Third-last">Travel/january 15 2023</div>
+            <div className="text-Third-last">Travel/january 20 2023</div>
           </div>
         </div>
         <Latest />

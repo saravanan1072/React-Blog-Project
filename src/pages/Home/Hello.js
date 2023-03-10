@@ -4,18 +4,35 @@
 import {useNavigate} from 'react-router-dom'
 
 import { useEffect ,useState} from "react";
-import { helloapi } from '../../utility/Api/Bollyhood';
+//import { helloapi } from '../../utility/Api/Bollyhood';
+import {ApiCaller} from "../../utility/ApiCaller"
 
 const Hello=(()=>{
     const [data,setData]=useState([])
 const navigate=useNavigate();
 
-    useEffect(()=>{
+    // useEffect(()=>{
       
-            setData(helloapi)
+    //         setData(helloapi)
            
   
-    },[]);
+    // },[]);
+    useEffect(()=>{
+    ApiCaller({
+      url:"https://reactblock-backend.onrender.com/hello",
+       method:'get',
+   })
+   .then((Response)=>{
+      setData(Response);
+      console.log(Response)
+   })
+   .catch((rej)=>{
+       console.log(rej);
+   })
+   .finally(()=>{
+       console.log("done");
+   })
+},[]);
     
 const handleNavigation = (item, index) => {
   console.log(item);

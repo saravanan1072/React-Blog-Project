@@ -43,7 +43,7 @@
 .text-One-last,.text-Second-last,.text-Third-last {
     font-size: large;
     padding: 10px;
-    color: rgb(50, 50, 50);
+    color: rgb(216, 209, 209);
     margin: 10px;
 }
 .text-One-last{
@@ -73,6 +73,10 @@
 @media(max-width:420px) {
     #Home {
         display: block;
+    }
+    .text-Third-last {
+      
+      display: none;
     }
 
     .one {

@@ -5,7 +5,7 @@
 function LatestStorie(){
     return (
         <div id="LatestStories">
-            <h2>Latest Stories</h2> <hr/>
+            <h2>Latest Stories</h2> <hr className="line3"/>
             <br/>
            
             <div id="Flex-container">

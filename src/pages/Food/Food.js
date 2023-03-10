@@ -5,7 +5,8 @@ import { useEffect ,useState} from "react";
 import bollyfirst from '../../images/food.jpg';
 import Nav from "../../Route/navgation/Nav";
 import Title from "../../Route/navgation/Title";
-import { foodapi } from "../../utility/Api/Bollyhood";
+//import { foodapi } from "../../utility/Api/Bollyhood";
+import { ApiCaller } from "../../utility/ApiCaller";
 
 
 const Bollywood=()=>{
@@ -16,14 +17,27 @@ const Bollywood=()=>{
         
     }
 const [data,setData]=useState([])
-    useEffect(()=>{
+    // useEffect(()=>{
       
-            setData(foodapi)
-           
-       
-    },[]);
-console.log(typeof data);
-console.log(data);
+    //         setData(foodapi)
+ 
+    // },[]);
+    useEffect(()=>{
+        ApiCaller({
+                  url:"https://reactblock-backend.onrender.com/food",
+                   method:'get',
+               })
+               .then((Response)=>{
+                  setData(Response);
+                 
+               })
+               .catch((rej)=>{
+                   console.log(rej);
+               })
+               .finally(()=>{
+                   console.log("done");
+               })
+           },[]);
 
 
     return(
