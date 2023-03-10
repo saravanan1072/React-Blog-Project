@@ -17,7 +17,7 @@ const [data,setData]=useState([])
    // useEffect(()=>{  setData(TechApi) },[]);
    useEffect(()=>{
     ApiCaller({
-              url:"https://reactblock-backend.onrender.com//technology",
+              url:"https://reactblock-backend.onrender.com/technology",
                method:'get',
            })
            .then((Response)=>{
