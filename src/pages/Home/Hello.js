@@ -70,7 +70,7 @@ const handleNavigation = (item, index) => {
                   onClick={() => handleNavigation(item, index)}
                 >
                   <h3 className="flex-title">{item.title}</h3>
-                  <p className="Flex-content">{item.content}</p>
+                  <p className="Flex-content">{item.description}</p>
                   <p className="flex-time">{item.publishedAt}</p>
                 </div>
               </div>
