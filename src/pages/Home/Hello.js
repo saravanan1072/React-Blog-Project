@@ -4,7 +4,7 @@
 import {useNavigate} from 'react-router-dom'
 
 import { useEffect ,useState} from "react";
-//import { helloapi } from '../../utility/Api/Bollyhood';
+// import { helloapi } from '../../utility/Api/Bollyhood';
 import {ApiCaller} from "../../utility/ApiCaller"
 
 const Hello=(()=>{

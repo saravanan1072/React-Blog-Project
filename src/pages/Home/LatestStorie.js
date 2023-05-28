@@ -28,9 +28,7 @@ function LatestStorie(){
                
             </div>
             <hr/>
-                <div>VIEW MORE
-                     {/* <img className="arrow" src={arrow} alt="arrow"/> */}
-                     </div>
+               
                      <br/> <br/> <br/> <br/> <br/>
         </div>
     )

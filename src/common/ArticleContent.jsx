@@ -11,7 +11,7 @@ const ArticleContent = () => {
         <span id="logo-article">
           <p className="the"> The</p> <h1 className="Siren">Siren</h1>
         </span>
-        <span className="getstart">Get Started</span>
+        {/* <span className="getstart">Get Started</span> */}
       </div>
       <hr />
       <div className="body">

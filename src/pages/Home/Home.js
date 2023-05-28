@@ -12,7 +12,7 @@ import {useNavigate} from 'react-router-dom'
 import "./Home.css";
 import { useEffect ,useState} from "react";
 import { ApiCaller } from "../../utility/ApiCaller";
-//import { HomeApi } from "../../utility/Api/Bollyhood";
+import { HomeApi } from "../../utility/Api/Bollyhood";
 
 function Home() {
 

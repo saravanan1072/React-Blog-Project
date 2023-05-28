@@ -3,7 +3,7 @@ import { useEffect ,useState} from "react";
 import bollyfirst from '../../images/bollyfirst.jpeg';
 import Nav from "../../Route/navgation/Nav";
 import Title from "../../Route/navgation/Title";
-//import {bollyApi} from '../../utility/Api/Bollyhood'
+// import {bollyApi} from '../../utility/Api/Bollyhood'
 import { ApiCaller } from "../../utility/ApiCaller";
 
 

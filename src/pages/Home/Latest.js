@@ -2,7 +2,7 @@ import "./Latest.css";
 import {useNavigate} from 'react-router-dom'
 
 import { useEffect ,useState} from "react";
-//import { latestApi } from "../../utility/Api/Bollyhood";
+// import { latestApi } from "../../utility/Api/Bollyhood";
 import { ApiCaller } from "../../utility/ApiCaller";
 export default function Latest(){
 
