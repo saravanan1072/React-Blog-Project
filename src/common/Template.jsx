@@ -57,18 +57,6 @@ const Template = (props) => {
         </div>
         
 
-
-
-
-
-
-
-
-
-
-
-
-        
         <div className="flex-Blog2">
           <div className="post-one">
             <img className="static" src={second.imageurl} alt="images" />

@@ -490,3 +490,94 @@
 
 
 }
+@media (min-width:500px) and (max-width:850px) {
+    /* templat body */
+   
+
+    .Grid-template  {  
+        margin: 0px 50px;
+        display: block;
+    }
+    .title-second-name{
+        position: absolute;
+        top: 1420px;
+        left: 10px;
+    } 
+    .flex-Blog2{
+        width: 720px;
+        margin: 20px;
+        
+    }
+   
+
+    
+    .static{
+        margin: 20px;
+        min-width: 500px;
+        height: 220px;
+    }
+   
+    .img-resize{
+        width: 150px;
+        height: 100px;
+        padding: 20px;
+    }
+    .post-two-title{
+        position: relative;
+        top: -100px;
+        left: 150px;
+        width: 500px;
+        font-size: 18px;
+       
+    }
+    .post-three{
+        border: 1px solid black;
+        margin-top: 20px;
+        min-height: 700px;
+        text-align: center;
+    
+    }
+    
+    /* latest article */
+    
+.position{
+    top: 900px;
+    left: -50px;
+}
+
+.post-three-latest{
+    width: 600px;
+    top: 1300px;
+    left: 100px;
+}
+.flex-Blog2-last{
+    position: absolute;
+    top: 1900px;
+    left: 80px;
+
+}
+#img-big{
+    left: 70px;
+}
+.img-big{
+    width: 600px;
+    height: 300px;
+}
+.static{
+    width: 200px;
+    height: 150px;
+}
+
+
+/* Latest stories */
+#LatestStories{
+    margin-left: 20px;
+    top: 2500px;
+}
+
+
+
+
+
+
+}
